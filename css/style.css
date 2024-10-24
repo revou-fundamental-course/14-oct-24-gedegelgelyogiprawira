@@ -276,9 +276,104 @@ footer {
   border-top: 1px solid black;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-container {
+/* Responsive Media Queries */
+@media only screen and (max-width: 1024px) {
+  header {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    max-width: 120px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-content {
+    flex-direction: column;
+  }
+
+  .anggota {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo img {
+    max-width: 100px;
+  }
+
+  .anggota {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .logo img {
+    max-width: 80px;
+  }
+
+  .anggota {
+    grid-template-columns: 1fr;
+  }
+
+  .slider img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .tim img {
+    max-width: 80px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .profile-content {
+    grid-template-columns: repeat(2, 1fr); /* Ubah menjadi 2 kolom di layar menengah */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .profile-content {
+    grid-template-columns: 1fr; /* Ubah menjadi 1 kolom di layar lebih kecil */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Tumpuk elemen form dan output secara vertikal */
   }
 }
