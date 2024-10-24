@@ -1,0 +1,279 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header and Navbar */
+header {
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+}
+
+header .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Section Styling */
+section {
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid black;
+  margin-bottom: 2rem;
+}
+
+/* Welcome Section */
+
+#welcome {
+  text-align: center;
+}
+
+#welcome h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
+}
+
+.image-placeholder img {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  max-width: 600px; /* Mengatur lebar maksimum slider */
+  margin: 1rem auto;
+  overflow: hidden;
+  position: relative; /* Tambahkan positioning untuk kontrol slide */
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Perhalus transisi */
+  width: 300%; /* Lebar untuk tiga gambar */
+}
+
+.slides img {
+  width: auto; /* Mengatur lebar otomatis untuk menjaga proporsi */
+  height: 100%; /* Menyesuaikan tinggi agar sesuai dengan slider */
+  max-height: 400px; /* Atur batas maksimum tinggi gambar */
+  object-fit: cover; /* Menjaga proporsi gambar */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  33.33% {
+    transform: translateX(-33.33%);
+  }
+  66.66% {
+    transform: translateX(-66.66%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.slides {
+  animation: slide 10s infinite; /* Mengatur durasi animasi */
+}
+
+/* Our Profile Section */
+#profile h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.profile-content div {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.profile-content h3 {
+  margin-bottom: 1rem;
+}
+
+/* Mengatur teks paragraf untuk rata kanan-kiri */
+.profile-content p {
+  text-align: justify; /* Mengatur teks agar rata kanan-kiri */
+}
+
+/* Mengatur daftar agar menjorok ke dalam */
+.profile-content ul {
+  padding-left: 20px; /* Menambahkan padding kiri untuk menjorok ke dalam */
+  list-style-type: disc; /* Menentukan jenis peluru */
+}
+
+/* Headquarter Section */
+#team {
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#team .anggota {
+  display: flex;
+  flex-wrap: wrap; /* Memungkinkan elemen untuk membungkus ke baris baru */
+  justify-content: space-around; /* Menjaga jarak antar elemen */
+  margin-top: 2rem;
+}
+
+.tim {
+  text-align: center; /* Memusatkan teks di bawah gambar */
+  margin: 1rem; /* Memberikan jarak antar kota */
+  flex: 0 1 calc(33.33% - 2rem); /* Membagi ruang menjadi tiga kolom */
+}
+
+.tim-image {
+  width: 80%; /* Mengubah ukuran gambar menjadi 80% dari lebar kontainer */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 10px; /* Membuat sudut gambar lebih halus */
+  max-width: 150px; /* Menetapkan lebar maksimum gambar */
+}
+
+/* Message Us Section */
+#message h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Form Input Styling */
+#message form {
+  flex: 1;
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-group label {
+  width: 150px; /* Set a fixed width for the labels */
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+.gender-options {
+  display: flex;
+  gap: 1rem;
+}
+
+#message form input[type="radio"] {
+  margin-right: 10px;
+}
+
+#message form button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#message form button:hover {
+  background-color: #555;
+}
+
+/* Form Output Styling */
+#formOutput {
+  flex: 1;
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.form-output p {
+  display: flex;
+  justify-content: space-between; /* Menyelaraskan label dan nilai */
+}
+
+.form-output strong {
+  flex-basis: 150px; /* Menetapkan lebar tetap untuk label */
+}
+
+/* Footer */
+footer {
+  text-align: right;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  margin-top: 2rem;
+  border-top: 1px solid black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}

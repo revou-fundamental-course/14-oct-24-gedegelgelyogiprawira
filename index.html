@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="upload/logo limasan tanpa background.png" alt="Profile Picture" />
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#profile">Our Profile</a>
+        <a href="#team">Our Team</a>
+        <a href="#message">Message Us</a>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="welcome">
+        <h1 id="greeting">Hi ... Welcome to Website</h1>
+        <p>Ini adalah website latihan pertama</p>
+         <!-- Image Slider -->
+         <div class="slider">
+          <div class="slides">
+            <img src="upload/foto1.jpeg" alt="Slide 1" />
+            <img src="upload/foto2.jpeg" alt="Slide 2" />
+            <img src="upload/foto3.jpeg" alt="Slide 3" />
+          </div>
+      </div>
+    </section>
+
+    <!-- Our Profile Section -->
+    <section id="profile">
+      <h2>Our Profile</h2>
+      <div class="profile-content">
+        <div class="about-us">
+          <h3>About Us</h3>
+          <p>Limasan bergerak di bidang bisnis pelayanan kesehatan (Health Care Service Business) sejak Juli 2021. Perusahaan ini  merupakan sebuah perusahaan perseroan terbatas bagian dari Sisma Medika Internasional Group, yang hadir untuk menciptakan produk – produk teknologi dalam mendukung kebutuhan Klinik Sisma Medikal.</p>
+        </div>
+        <div class="vision-mission">
+          <h3>Visi & Misi</h3>
+          <p>Visi kami adalah sikap keberlimpahan untuk berbagi kebermanfaatan dalam system, solution & business support (di bidang healthcare).</p>
+          <p>Misi kami adalah menjadi trusted partner dalam health-care business dengan solusi terintegrasi, dengan attitude service excellence dalam men-support business di level Sismadi Group untuk bertumbuh kembang.</p>
+        </div>
+        <div class="our-service">
+          <h3>Our Service</h3>
+          <ul>
+            <li>LClinic</li>
+            <li>Lpharma</li>
+            <li>Lfinance</li>
+            <li>IT Support & Maintenace</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <h2>Our Team</h2>
+      <div class="anggota">
+        <div class="tim">
+          <img src="upload/male.jpeg" alt="Manager" class="tim-image">
+          <p>Manager</p>
+        </div>
+        <div class="tim">
+          <img src="upload/male.jpeg" alt="Team Leader" class="tim-image">
+          <p>Team Leader</p>
+        </div>
+        <div class="tim">
+          <img src="upload/male.jpeg" alt="Junior IT" class="tim-image">
+          <p>Junior IT</p>
+        </div>
+        <div class="tim">
+          <img src="upload/female.jpeg" alt="Developer" class="tim-image">
+          <p>Developer</p>
+        </div>
+        <div class="tim">
+          <img src="upload/female.jpeg" alt="Bussiness Analyst" class="tim-image">
+          <p>Bussiness Analyst</p>
+        </div>
+        <div class="tim">
+          <img src="upload/female.jpeg" alt="Data Analyst" class="tim-image">
+          <p>Data Analyst</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="message">
+      <h2>Message Us</h2>
+      <div class="contact-container">
+        <form id="messageForm">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama" required title="Silakan isi nama Anda" />
+          </div>
+
+          <div class="form-group">
+            <label for="date">Tanggal Lahir</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+
+          <div class="form-group">
+            <label>Jenis Kelamin</label>
+            <div class="gender-options"><input type="radio" id="male" name="gender" value="Laki-Laki" required /> Laki-Laki <input type="radio" id="female" name="gender" value="Perempuan" required /> Perempuan</div>
+          </div>
+
+          <div class="form-group">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="message" placeholder="Pesan" title="Silakan isi pesan Anda"></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+
+        <div id="formOutput"></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Created By Gede Gelgel Yogi Prawira</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
